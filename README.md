@@ -59,15 +59,6 @@ GitHub Pages serves `main:/docs`. The Python process runs in each visitor's brow
 
 Pyodide is pinned to 0.27.7 using the official documented CDN. The CDN receives normal runtime-download requests (such as IP and browser metadata); map contents are not uploaded. Runtime download can be slow or blocked: the interface reports loading/errors rather than showing fake results. The local CLI remains available. This is not production routing, accessibility guidance or navigation software.
 
-## Interview walkthrough
-
-1. Run the expensive-shortcut scenario and explain why the cheapest route is not necessarily the fewest moves.
-2. Change to the blocked scenario. Explain why an empty route is a valid result.
-3. Show the two expansion counts. Derive Manhattan distance and explain why diagonal movement would require changing the heuristic.
-4. Explain stale heap entries, parent reconstruction, tie-breaking and the positive-weight restriction.
-5. Open the independent oracle test and explain why a second algorithm is stronger evidence than testing only known outputs.
-6. Make and test your own enhancement before claiming personal authorship: add diagonal movement with a proven heuristic, a map import validator, or a bidirectional search.
-
 ## References and licence
 
 Original implementation; no third-party repository source copied. Algorithm background: [Dijkstra's original shortest-path paper](https://doi.org/10.1007/BF01386390) and [A* original paper](https://doi.org/10.1109/TSSC.1968.300136). Runtime integration follows [Pyodide's official quickstart](https://pyodide.org/en/stable/usage/quickstart.html). Pyodide and its bundled Python runtime retain their upstream licences; they are loaded from the CDN, not vendored here. Project code is MIT licensed; see LICENSE.
